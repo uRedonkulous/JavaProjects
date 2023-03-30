@@ -18,80 +18,65 @@
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container">
 	<h1 class="text-center">Welcome! Register Here!</h1>
 	<form:form action="/register" method="post" modelAttribute="newUser">
 
-	<table class="table table-striped table-bordered">
-		<thead>
-	    	<tr>
-	            <td>Register</td>
-	        </tr>
-	    </thead>
-	    <thead>
-	    	<tr>
-	            <td>User Name:</td>
-	            <td>
-					<form:input class="input" path="userName"/>
-	            	<form:errors path="userName" class="text-danger"/>					
-	            </td>
-	        </tr>
-	        <tr>
-	            <td>Email:</td>
-	            <td>
-					<form:input class="input" path="email"/>
-	            	<form:errors path="email" class="text-danger"/>
-	            </td>
-	        </tr>
-	        <tr>
-	            <td>Password:</td>
-	            <td>
-					<form:input class="input" type="password" path="password"/>
-	            	<form:errors path="password" class="text-danger"/>
-	            </td>
-	        </tr>
-	        <tr>
-	            <td>Confirm PW:</td>
-	            <td>
-					<form:input class="input" type="password" path="confirm"/>
-					<form:errors path="confirm" class="text-danger"/>
-	            </td>
-	        </tr>
-	        <tr>
-	        	<td><input class="input btn-primary" type="submit" value="Submit"/></td>
-	        </tr>
-	    </thead>
-	</table>
+	<div class="my-5 mx-auto">
+	    	<div>
+	            <h2>Register</h2>
+	        </div>
+	    <form style="max-width: 600px; margin: 0 auto;">
+	    	<div class="form-group row">
+				<label class="col-4 col-form-label">User Name:</label>
+				<form:input class="input" path="userName"/>
+	            <form:errors path="userName" class="text-danger"/>					
+	        </div>
+	        <div class="form-group row">
+	            <label class="col-4 col-form-label">Email:</label>
+				<form:input class="input" path="email"/>
+	            <form:errors path="email" class="text-danger"/>
+	        </div>
+	        <div class="form-group row">
+	            <label class="col-4 col-form-label">Password:</label>
+				<form:input class="input" type="password" path="password"/>
+	            <form:errors path="password" class="text-danger"/>
+	        </div>
+	        <div class="form-group row">
+	            <label class="col-4 col-form-label">Confirm PW:</label>
+				<form:input class="input" type="password" path="confirm"/>
+				<form:errors path="confirm" class="text-danger"/>
+	        </div>
+	        <div>
+	        	<input class="input btn-primary" type="submit" value="Submit"/>
+	        </div>
+	    </form>
+	</div>
 </form:form>
 <hr>
 <form:form action="/login" method="post" modelAttribute="newLogin">
 
-	<table class="table table-striped table-bordered">
-		<thead>
-	    	<tr>
-	            <td>Log In</td>
-	        </tr>
-	    </thead>
-	    <thead>
-	        <tr>
-	            <td>Email:</td>
-	            <td>
-					<form:input class="input" path="email"/>
-					<form:errors path="email" class="text-danger"/>
-	            </td>
-	        </tr>
-	        <tr>
-	            <td>Password:</td>
-	            <td>
-					<form:input class="input" type="password" path="password"/>
-	            	<form:errors path="password"  class="text-danger"/>
-	        </td>
-	        </tr>
-	        <tr>
-	        	<td><input class="input btn btn-success" type="submit" value="Log In"/></td>
-	        </tr>
-	    </thead>
-	</table>
+	<div class="my-5 mx-auto">
+		<div>
+	         <h2>Log In</h2>
+	    </div>
+	        <div class="form-group row">
+	            <label class="col-4 col-form-label">Email:</label>
+				<form:input class="input" path="email"/>
+	            <form:errors path="email" class="text-danger"/>
+	        </div>
+	        <div class="form-group row">
+	            <label class="col-4 col-form-label">Password:</label>
+				<form:input class="input" type="password" path="password"/>
+	            <form:errors path="password" class="text-danger"/>
+	        </div>
+	        <div>
+	        	<input class="input btn btn-success" type="submit" value="Log In"/>
+	        </div>
+
+	</div>
 </form:form>
+</div>
 </body>
 </html>
 

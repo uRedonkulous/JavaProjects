@@ -20,19 +20,18 @@
 <body>
    <div class="container">
 	
-	<h2 class="text-center">Create your game!</h2>
+	<h2 class="text-center">Update your Upload!</h2>
 
 	<a href="/home">Back to Home</a>
 
 	<div class="container">
-		<form:form action="/games/${game.id}" modelAttribute="team" class="form" method="post">
-		
+		<form:form action="/games/${game.id}" modelAttribute="game" class="form" method="post">
 			<input type="hidden" name="_method" value="put"/>
 		
 			<div class="form-row">
-				<form:label for="teamName" path="teamName">Game Name:</form:label>
-				<form:input type="text" path="teamName" class="form-control"/>
-				<form:errors path="teamName" class="text-danger"/>
+				<form:label for="gameName" path="gameName">Game Name:</form:label>
+				<form:input type="text" path="gameName" class="form-control"/>
+				<form:errors path="gameName" class="text-danger"/>
 			</div>
 			
 			<div class="form-row">
@@ -42,19 +41,18 @@
 			</div>
 			
 			<div class="form-row">
-
 				<form:label for="genre" path="genre">Genre:</form:label>
 				<form:input type="text" path="genre" class="form-control"/>
 				<form:errors path="genre" class="text-danger"/>
 			</div>
 			
 			<div class="form-row">
-				<form:errors path="user" class="error"/>
 				<form:input type="hidden" path="user" value="${user.id}" class="form-control"/>
+				<form:errors path="user" class="error"/>
 			</div>
 			
 			<div class="form-row">
-				<input type="submit" value="Submit" class="btn-primary"/>
+				<input type="submit" value="Update" class="btn-primary"/>
 			</div>
 			
 		</form:form>

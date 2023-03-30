@@ -143,6 +143,8 @@ public class MainController {
     	}
     	games.update(game); 	
     	return "redirect:/home";
+    	
+    	
     }
     
     //Delete Game
